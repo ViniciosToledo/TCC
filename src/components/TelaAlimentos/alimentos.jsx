@@ -1,5 +1,6 @@
 import React from 'react';
 import Titulo from '../Titulo/titulo';
+import { Link } from 'react-router-dom';
 
 
 import Arroz from '/Users/BIN/Desktop/VINICIOS/TCC/src/assets/Arroz.png';
@@ -9,12 +10,14 @@ import CardItem from '../CardItem/cardItem';
 import Voltar from '/Users/BIN/Desktop/VINICIOS/TCC/src/assets/voltar-icon.svg';
 
 const Alimentos = () => {
+
   return (
     <>
-      <img className="voltarbtn" src={Voltar} alt="Voltar" style={{ marginBottom: '-2rem'}}/>
+      <Link to="/"><img className="voltarbtn" src={Voltar} alt="Voltar" style={{ marginBottom: '-2rem'}}/></Link>
+      
       <div className='containerHome'>
           <Titulo titulo="Alimentos"></Titulo>
-          <CardItem image={Arroz} alt="Arroz"></CardItem>
+          <CardItem image={Arroz} alt="Arroz" ></CardItem >
           <CardItem image={Pizza} alt="Pizza"></CardItem>
           <CardItem image={Agua} alt="Água"></CardItem>
       </div>
